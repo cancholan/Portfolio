@@ -1,3 +1,8 @@
+#sample user:
+#username: admin
+#password: default
+
+
 import sqlite3
 import hashlib
 import uuid
@@ -7,7 +12,7 @@ from bottle import route, run, request, template, response
 def index():
     return template('index')
 
-@route('login', method='POST')
+@route('/login', method='POST')
 def login():
     #get user info and hash password
     username = request.forms.get('username')
@@ -29,9 +34,9 @@ def login():
 
 
 def validate_user(username, password):
-    conn = sqlite3.connect('userdata.sqlite') #TODO: add database with hashed passwords
+    conn = sqlite3.connect('userdata.sqlite')
     cur = conn.cursor()
-    sql = 'SELECT id FROM users WHERE user = ? AND password = ?'
+    sql = 'SELECT id FROM users WHERE username = ? AND password = ?'
     cur.execute(sql, (username, password))
     user = cur.fetchone()
     conn.close()
@@ -42,4 +47,4 @@ def validate_user(username, password):
 
     
 
-run(host='localhost', port='8080')
+run(host='localhost', port=8080)
