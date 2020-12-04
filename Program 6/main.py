@@ -6,7 +6,8 @@
 import sqlite3
 import hashlib
 import uuid
-from bottle import route, run, request, template, response
+import requests
+from bottle import route, run, request, template, response, redirect
 
 @route ('/', method='GET')
 def index():
@@ -20,7 +21,7 @@ def login():
     pw = password.encode('utf-8')
     pw_hash = hashlib.sha1(pw).hexdigest()
 
-    #create cookie
+    #validate user and create cookie
     if validate_user(username, pw_hash):
         cookie_val = str(uuid.uuid4())
         response.set_cookie('COOKIE', cookie_val)
@@ -28,12 +29,37 @@ def login():
     else:
         return '<p>Login Failed.</p>'
 
-# @route('getweather', method='POST')
-# def getweather():
-#TODO: verify cookie and redirect to login if needed, get weather API and send to table for viewing
+@route('/getweather', method='POST')
+def getweather():
+    #verify cookie and redirect to default if needed
+    if not request.get_cookie('COOKIE'):
+        redirect('/')
 
+    #get selection from user, create link to JSON object, convert to dictionary
+    icao = request.forms.get('airports')
+    url = "http://api.geonames.org/weatherIcaoJSON?ICAO=" + icao + "&username=jctcstudents"
+    response = requests.get(url)
+    data = response.json()
+    
+    #get weather information for chosen airport, convert units as needed
+    stationName = data["weatherObservation"]["stationName"]
+    elevation = data["weatherObservation"]["elevation"]
+    elevation = round(float(elevation) * 3.28084, 1)
+    clouds = data["weatherObservation"]["clouds"]
+    dewPoint = data["weatherObservation"]["dewPoint"]
+    dewPoint = round(float(dewPoint) * 1.8 + 32, 0)
+    windSpeed = data["weatherObservation"]["windSpeed"]
+    windSpeed = round(float(windSpeed) * 1.1508, 1)
+    temperature = data["weatherObservation"]["temperature"]
+    temperature = round(float(temperature) * 1.8 + 32, 0)
+    humidity = data["weatherObservation"]["humidity"]
+
+    #add data to tuple and send to table to display to user
+    tpl = {'stationName': stationName, 'elevation': elevation, 'clouds': clouds, 'dewPoint': dewPoint, 'windSpeed': windSpeed, 'temperature': temperature, 'humidity': humidity}
+    return template('weather', tpl)
 
 def validate_user(username, password):
+    #connect to database and verify user info
     conn = sqlite3.connect('userdata.sqlite')
     cur = conn.cursor()
     sql = 'SELECT id FROM users WHERE username = ? AND password = ?'
