@@ -13,6 +13,12 @@ from bottle import route, run, request, template, response, redirect
 def index():
     return template('index')
 
+@route('/login', method='GET')
+def cookie():
+    #verify cookie and redirect to default if needed
+    if not request.get_cookie('COOKIE'):
+        redirect('/')
+
 @route('/login', method='POST')
 def login():
     #get user info and hash password
@@ -29,11 +35,14 @@ def login():
     else:
         return '<p>Login Failed.</p>'
 
-@route('/getweather', method='POST')
-def getweather():
+@route('/getweather', method='GET')
+def cookie2():
     #verify cookie and redirect to default if needed
     if not request.get_cookie('COOKIE'):
         redirect('/')
+
+@route('/getweather', method='POST')
+def getweather():
 
     #get selection from user, create link to JSON object, convert to dictionary
     icao = request.forms.get('airports')
