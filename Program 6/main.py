@@ -35,6 +35,31 @@ def login():
     else:
         return '<p>Login Failed.</p>'
 
+@route('/newuser', method='GET')
+def newuser():
+    return template('newuser')
+
+@route('/createuser', method='POST')
+def createuser():
+    #get new user info
+    username = request.forms.get('newuser')
+    password = request.forms.get('newpass')
+    password2 = request.forms.get('newpass2')
+
+    #verify passwords match and add user to database
+    if password == password2:
+        conn = sqlite3.connect('userdata.sqlite')
+        cur = conn.cursor()
+        password = password.encode('utf-8')
+        pw_hash = hashlib.sha1(password).hexdigest()
+        sql = "INSERT INTO users (username, password) VALUES (?, ?)"
+        cur.execute(sql, (username, pw_hash))
+        conn.commit()
+        conn.close()
+        return '<p>User created. <a href="/">Click Here</a> to log in.'
+    else:
+        return '<p>Passwords do not match. Please try again.</p>'
+
 @route('/getweather', method='GET')
 def cookie2():
     #verify cookie and redirect to default if needed
