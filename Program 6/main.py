@@ -7,7 +7,11 @@ import sqlite3
 import hashlib
 import uuid
 import requests
-from bottle import route, run, request, template, response, redirect
+from bottle import route, run, request, template, response, redirect, static_file
+
+@route('/static/<filename>')
+def server_static(filename):
+    return static_file(filename, root='./views')
 
 @route ('/', method='GET')
 def index():
