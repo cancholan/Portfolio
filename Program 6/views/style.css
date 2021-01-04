@@ -62,15 +62,16 @@ input{
     transition: box-shadow .1s;
 }
 
-#text{
+p#text{
     margin: 20px auto;
     font-family: 'Roboto', sans-serif;
+    display: block;
 }
 
 a{
     text-decoration: none;
     font-weight: bold;
-    color: 	rgb(102, 153, 140);
+    color: 	rgb(161, 214, 166);
 }
 
 a:hover{
