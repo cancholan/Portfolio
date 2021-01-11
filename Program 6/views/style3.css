@@ -62,20 +62,3 @@ input{
     box-shadow: 10px 10px 30px 5px rgba(0,0,0,0.5);
     transition: box-shadow .1s;
 }
-
-p#text{
-    font-family: 'Roboto', sans-serif;
-    width: 95%;
-    text-align: center;
-    margin: 0 auto;
-}
-
-a{
-    text-decoration: none;
-    font-weight: bold;
-    color: 	rgb(161, 214, 166);
-}
-
-a:hover{
-    text-decoration: underline;
-}

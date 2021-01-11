@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="UTF-8">
         <title>Airport Information</title>
         <link rel="stylesheet" type="text/css" href="/static/style2.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">

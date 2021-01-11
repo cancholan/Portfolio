@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="UTF-8">
         <title>Login form</title>
         <link rel="stylesheet" type="text/css" href="/static/style.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
