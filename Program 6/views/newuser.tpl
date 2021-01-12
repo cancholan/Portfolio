@@ -21,7 +21,7 @@
 
     </form>
     % if defined('message'):
-    <p class="warning">{{message}}</p>
+    <p class="warning"><a href="/">{{message}}</a></p>
     %end
 </div>
 </body>

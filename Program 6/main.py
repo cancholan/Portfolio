@@ -63,7 +63,7 @@ def createuser():
         conn.commit()
         conn.close()
 
-        message = 'User created. <a href="/">Click Here</a> to log in.'
+        message = 'User created. Click here to log in.'
         message = {'message': message}
         return template('newuser', message)
     else:
