@@ -38,8 +38,8 @@ def login():
         return template('weather') 
     else:
         logError = 'Login Failed. Please try again.'
-        warning = {'logError': logError}
-        return template('index', warning)
+        logError = {'logError': logError}
+        return template('index', logError)
 
 @route('/newuser', method='GET')
 def newuser():
@@ -52,24 +52,30 @@ def createuser():
     password = request.forms.get('newpass')
     password2 = request.forms.get('newpass2')
 
+    #verify user has entered data for username and password
+    if username or password or password2:
     #verify passwords match and add user to database
-    if password == password2:
-        conn = sqlite3.connect('userdata.sqlite')
-        cur = conn.cursor()
-        password = password.encode('utf-8')
-        pw_hash = hashlib.sha1(password).hexdigest()
-        sql = "INSERT INTO users (username, password) VALUES (?, ?)"
-        cur.execute(sql, (username, pw_hash))
-        conn.commit()
-        conn.close()
+        if password == password2:
+            conn = sqlite3.connect('userdata.sqlite')
+            cur = conn.cursor()
+            password = password.encode('utf-8')
+            pw_hash = hashlib.sha1(password).hexdigest()
+            sql = "INSERT INTO users (username, password) VALUES (?, ?)"
+            cur.execute(sql, (username, pw_hash))
+            conn.commit()
+            conn.close()
 
-        message = 'User created. Click here to log in.'
-        message = {'message': message}
-        return template('newuser', message)
+            message = 'User created. Click here to log in.'
+            message = {'message': message}
+            return template('newuser', message)
+        else:
+            warning = 'Passwords do not match. Please try again.'
+            warning = {'warning': warning}
+            return template('newuser', warning)
     else:
-        message = 'Passwords do not match. Please try again.'
-        message = {'message': message}
-        return template('newuser', message)
+        warning = 'Please enter a username and password.'
+        warning = {'warning': warning}
+        return template('newuser', warning)
 
 @route('/getweather', method='GET')
 def cookie2():
