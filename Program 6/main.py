@@ -37,7 +37,9 @@ def login():
         response.set_cookie('COOKIE', cookie_val)
         return template('weather') 
     else:
-        return '<p>Login Failed.</p>'
+        logError = 'Login Failed. Please try again.'
+        warning = {'logError': logError}
+        return template('index', warning)
 
 @route('/newuser', method='GET')
 def newuser():
@@ -60,9 +62,14 @@ def createuser():
         cur.execute(sql, (username, pw_hash))
         conn.commit()
         conn.close()
-        return '<p>User created. <a href="/">Click Here</a> to log in.'
+
+        message = 'User created. <a href="/">Click Here</a> to log in.'
+        message = {'message': message}
+        return template('newuser', message)
     else:
-        return '<p>Passwords do not match. Please try again.</p>'
+        message = 'Passwords do not match. Please try again.'
+        message = {'message': message}
+        return template('newuser', message)
 
 @route('/getweather', method='GET')
 def cookie2():
@@ -110,5 +117,8 @@ def validate_user(username, password):
     return True
 
     
+def main():
+    run(host='localhost', port=8080, reloader=True)
 
-run(host='localhost', port=8080)
+if __name__ == '__main__':
+    main()

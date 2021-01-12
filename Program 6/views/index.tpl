@@ -19,6 +19,9 @@
 
     </form>
     <p id="text">New user? <a href="/newuser">Click Here</a> to create an account!</p>
+    % if defined('logError'):
+    <p class="warning">{{logError}}</p>
+    %end
   </div>
 
 </body>

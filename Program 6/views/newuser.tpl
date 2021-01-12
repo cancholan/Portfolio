@@ -20,6 +20,9 @@
         <input type="submit"class="submit">
 
     </form>
+    % if defined('message'):
+    <p class="warning">{{message}}</p>
+    %end
 </div>
 </body>
 </html>

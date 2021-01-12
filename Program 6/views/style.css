@@ -15,7 +15,7 @@ body{
     display: table;
 }
 
-.newuser{
+.signin{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -68,6 +68,14 @@ p#text{
     width: 95%;
     text-align: center;
     margin: 0 auto;
+}
+
+p.warning{
+    font-family: 'Roboto', sans-serif;
+    width: 95%;
+    text-align: center;
+    margin: 0 auto;
+    color: red;
 }
 
 a{
