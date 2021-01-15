@@ -53,7 +53,7 @@ def createuser():
     password2 = request.forms.get('newpass2')
 
     #verify user has entered data for username and password
-    if username or password or password2:
+    if username and password and password2:
     #verify passwords match and add user to database
         if password == password2:
             conn = sqlite3.connect('userdata.sqlite')
