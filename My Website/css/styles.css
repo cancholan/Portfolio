@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
+
+html, body{
+  height:100%;
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+  color: #222;
+  overflow-x: hidden im !important;
+  scroll-behavior: smooth;
+}
+
+.jumbotron-fluid{
+    height: 100vh;
+    background: linear-gradient(0deg, rgba(14,0,255,1) 0%, rgba(97,14,173,1) 50%, rgba(255,0,121,1) 100%);
+}
+
+#jumboText{
+    top: 50%;
+    transform: translateY(-50%);
+    position: relative;
+}
+
+a{
+    color: #222;
+}
+a:hover{
+    color: rgb(53, 53, 53);
+}
+
+.jumbotron-fluid p{
+    font-size: 2em;
+}
+
+.carousel-item{
+    background-color: rgba(145, 145, 145, 70%);
+    padding: 2em;
+    border-radius: 2em;
+}

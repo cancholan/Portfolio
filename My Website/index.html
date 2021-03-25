@@ -6,24 +6,37 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Welcome!</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/all.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
         <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
     </head>
 
+
+    <!--Jumbotron-->
+    <div class="jumbotron-fluid">
+        <div class="container text-center" id="jumboText">
+            <h1 class="display-4">Hello. My name is Nick Canchola</h1>
+            <p>Lets work together!</p>
+            <br>
+            <br>
+            <a href="#about"><i class="far fa-4x fa-arrow-alt-circle-down"></i></a>
+        </div>
+    </div>
+
     <!--Navigation-->
     <nav class="navbar bg-light navbar-light navbar-expand-lg sticky-top">
-        <div class="container">
+        <div class="container-fluid">
             <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarResponsive">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a href="#" class="nav-link active">Home</a></li>
                     <li class="nav-item"><a href="#about" class="nav-link">About Me</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">My Work</a></li>
+                    <li class="nav-item"><a href="#mywork" class="nav-link">My Work</a></li>
                     <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
                 </ul>
             </div>
@@ -32,18 +45,64 @@
     </nav>
 
     <!--About me heading-->
-    <div class="col-12 text-left mt-5 ml-5">
+    <div class="text-left mt-5 ml-5">
         <h1 class="text-dark pt-4" id="about">About me.</h1>
         <div class="border-top border-danger w-25 my-3"></div>
     </div>
 
+    <!--carousel section-->
+    <div id="slides" class="carousel slide" data-ride="carousel" data-pause="hover">
+        <ul class="carousel-indicators">
+            <li data-target="#slides" data-slide-to="0" class="active"></li>
+            <li data-target="#slides" data-slide-to="1"></li>
+            <li data-target="#slides" data-slide-to="2"></li>
+        </ul>
+        <div class="carousel-inner">
+            <div class="container">
+                <div class="row justify content center">
+                    <div class="carousel-item active">
+                        <h3>Who am I?</h3>
+                        <p>I am a web developer based in Covington, Ky. I am proficeint in HTML5, CSS3, and Python. I am learning JavaScript and SQL. I am currently seeking an entry level role as a developer in the greater Cincinnati area. </p>
+                    </div>
+                    <div class="carousel-item">
+                        <h3>Education</h3>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-6">
+                                    <h5>Gateway Community and Technical College</h5>
+                                    <ul>
+                                        <li>Persuing an Associates Degree in CIT on the Programming Track</li>
+                                        <li>Expected Graduation: May, 2021</li>
+                                        <li>GPA: 3.8</li>
+                                    </ul>
+                                </div>
+                                <div class="col-6">
+                                    <h5>Northern Kentucky University</h5>
+                                    <ul>
+                                        <li>Bachelor of Arts Degree in International Studies, Spanish Minor</li>
+                                        <li>Graduated: December, 2016</li>
+                                        <li>GPA: 3.5</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <h3>Work Experience</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam eos repellendus reiciendis cumque! Recusandae est perspiciatis accusamus cupiditate id dolor, quod, tempora esse facilis maxime illo labore quaerat! Eaque, architecto!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!--My work heading-->
-    <div class="col-12 text-left mt-5 ml-5">
-        <h1 class="text-dark pt-4" id="about">My Work.</h1>
+    <div class="text-left mt-5 ml-5">
+        <h1 class="text-dark pt-4" id="mywork">My Work.</h1>
         <div class="border-top border-danger w-25 my-3"></div>
     </div>
 
+    <!--3 col section-->
     <div class="container">
         <div class="row">
             <div class="col-md-4">
@@ -51,23 +110,25 @@
                 <h4 class="my-5">A Project</h4>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo exercitationem ea architecto, nisi asperiores vero maxime debitis soluta culpa rem eveniet sunt suscipit vel optio? Recusandae natus nam ullam ut?</p>
                 <a href="https://cancholan2.pythonanywhere.com/" class="btn btn-outline-dark btn-md" target="_blank">Visit Site</a>
-                <a href="https://github.com/cancholan/Portfolio/tree/main/Program%206" class="btn btn-outline-secondary btn-md" target="_blank">View on GitHub</a>
+                <a href="https://github.com/cancholan/Portfolio/tree/main/Program%206" class="btn btn-outline-secondary btn-md my-1" target="_blank">View on GitHub</a>
             </div>
             <div class="col-md-4">
-                <!--find a good image to put here-->
+                <!--possibly image here-->
                 <h4 class="my-5">Weather App</h4>
                 <p>This app allows users to create an account and sign in to view up to date weather information for various airports around the globe. It utilizes the bottle.py micro-framework, MySQL database to store user information, and the geonames api to display weather information for the user's selection.</p>
                 <a href="https://cancholan2.pythonanywhere.com/" class="btn btn-outline-dark btn-md" target="_blank">Visit Site</a>
-                <a href="https://github.com/cancholan/Portfolio/tree/main/Program%206" class="btn btn-outline-secondary btn-md" target="_blank">View on GitHub</a>
+                <a href="https://github.com/cancholan/Portfolio/tree/main/Program%206" class="btn btn-outline-secondary btn-md my-1" target="_blank">View on GitHub</a>
             </div>
             <div class="col-md-4">
                 <!--find a good image to put here-->
                 <h4 class="my-5">A Project</h4>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo exercitationem ea architecto, nisi asperiores vero maxime debitis soluta culpa rem eveniet sunt suscipit vel optio? Recusandae natus nam ullam ut?</p>
                 <a href="https://cancholan2.pythonanywhere.com/" class="btn btn-outline-dark btn-md" target="_blank">Visit Site</a>
-                <a href="https://github.com/cancholan/Portfolio/tree/main/Program%206" class="btn btn-outline-secondary btn-md" target="_blank">View on GitHub</a>
+                <a href="https://github.com/cancholan/Portfolio/tree/main/Program%206" class="btn btn-outline-secondary btn-md my-1" target="_blank">View on GitHub</a>
             </div>
         </div>
     </div>
+
+
 
 </html>
