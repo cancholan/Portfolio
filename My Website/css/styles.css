@@ -40,6 +40,37 @@ a:hover{
     border-radius: 2em;
 }
 
+#workSection{
+    padding-bottom: 2em;
+}
+
+footer{
+    background-color: #383838;
+    padding: 1rem 2rem 3rem;
+  }
+
+ul.social{
+    list-style-type: none;
+    display: flex;
+    max-width: 16rem;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+footer .svg-inline--fa{
+    color: aliceblue;
+    padding: .1em;
+  }
+
+footer .svg-inline--fa:hover{
+    color: #68a0d2;
+  }
+
+.socket{
+    background-color: #222222;
+    border-top: .1rem solid #4981b3;
+  }
+
 @media only screen and (max-width: 400px){
     .carousel-item{
         height: 555px;
