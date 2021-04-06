@@ -34,10 +34,18 @@ a:hover{
 
 
 .carousel-item{
-    height: 20em;
+    height: 40em;
     background-color: rgba(145, 145, 145, 70%);
     padding: 2em;
     border-radius: 2em;
+}
+
+.carousel-item:first-of-type h3{
+    margin-top: 150px;
+}
+
+.carousel-item:nth-of-type(2) h3{
+    margin-top: 150px;
 }
 
 #workSection{
