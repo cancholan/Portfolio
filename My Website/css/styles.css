@@ -11,7 +11,8 @@ html, body{
 
 .jumbotron-fluid{
     height: 100vh;
-    background: linear-gradient(0deg, rgba(14,0,255,1) 0%, rgba(97,14,173,1) 50%, rgba(255,0,121,1) 100%);
+    background-image: url(../img/bg.jpg);
+    background-size: cover;
 }
 
 #jumboText{
@@ -32,6 +33,11 @@ a:hover{
     font-size: 2em;
 }
 
+hr{
+    border: 1px solid rgba(0,145,189,255);
+    width: 15em;
+    margin-left: 0px;
+}
 
 .carousel-item{
     height: 40em;
@@ -46,6 +52,10 @@ a:hover{
 
 .carousel-item:nth-of-type(2) h3{
     margin-top: 150px;
+}
+
+#mobileslides{
+    display: none;
 }
 
 #workSection{
@@ -79,13 +89,28 @@ footer .svg-inline--fa:hover{
     border-top: .1rem solid #4981b3;
   }
 
-@media only screen and (max-width: 400px){
+@media only screen and (max-width: 425px){
+
+    #slides{
+        display: none;
+    }
+
+    #mobileslides{
+        display: block;
+    }
+
     .carousel-item{
         height: 555px;
         margin: 0 .5em;
     }
-
+     
     .carousel-item:first-of-type h3{
         margin-top: 3em;
     }
+
+    .carousel-item:nth-of-type(2) h3{
+        margin-top: 1em;
+    }
+
+
 }
