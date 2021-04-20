@@ -22,11 +22,14 @@ html, body{
 }
 
 /*Scroll icon*/
-a{
+.jumbotron-fluid a{
     color: #222;
+    transition: 600ms;
+    display: inline-block;
 }
-a:hover{
-    color: rgb(53, 53, 53);
+.jumbotron-fluid a:hover{
+    color: rgb(100, 100, 100);
+    transform: rotate(180deg);
 }
 
 .jumbotron-fluid p{
@@ -41,7 +44,7 @@ hr{
 
 .carousel-item{
     height: 40em;
-    background-color: rgba(145, 145, 145, 70%);
+    background-color: #d99e80;
     padding: 2em;
     border-radius: 2em;
 }
@@ -78,6 +81,7 @@ ul.social{
 footer .svg-inline--fa{
     color: aliceblue;
     padding: .1em;
+    transition: 500ms;
   }
 
 footer .svg-inline--fa:hover{
