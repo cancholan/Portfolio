@@ -1,0 +1,79 @@
+<html><head><title>todo list</title>
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  
+  </head><body>
+    
+    <div class='container'>
+       <h2> <span id='total'></span> Todo Items</h2>
+       <p><input type="text" id="newTodo" placeholder="add new job"> &nbsp; 
+       <button type="button" onClick="validate()">Add Todo Item</button></p>
+  
+       <table class='table table-bordered'>
+          <thead>
+               <tr><th>Delete</th><th>Todo Items</th><th>Done</th></tr>
+          </thead>
+          <tbody id='tblBody'>
+               <!-- rows will be added here -->
+          </tbody>
+       </table>
+     </div>
+  
+  <script>
+       var todos = [];	               // global array of todo items
+       var todoTotal = document.getElementById('total');
+       todoTotal.innerHTML = 0;
+  
+        function validate(){ //prevent user from entering blank task
+            jobText = document.getElementById("newTodo").value; // get todo  text
+            if (jobText == ""){
+                alert("Please enter the job in the text area.");
+            }else{
+                addJob(jobText);
+            }
+        }
+
+        function addJob(jobText) {
+            todos.push(jobText);             // add new job text to the end of the array
+            todoTotal.innerHTML = todos.length;
+            document.getElementById('newTodo').value = "";         // clear textbox
+  
+            // add table row using last index and job text
+            makeTableRow(todos.length -1, jobText);                 
+        }
+  
+        function removeItem(n) {
+            todos.splice(n, 1);       // remove selected todo text from array
+            todoTotal.innerHTML = todos.length;
+            document.getElementById("tblBody").innerHTML = "";   // delete all rows
+  
+            for(i=0; i<todos.length; i++){                    // rebuild table rows      
+                makeTableRow(i, todos[i]);     // add  row from index i of array
+            }
+        }
+  
+        function makeTableRow(index, job) {
+            var newRow = document.createElement("tr"); 
+            var rowTxt = "<td><input type='button' class='btn btn-danger' ";
+            rowTxt += "value='delete' onclick='removeItem(" + index + ")'></td>"; 
+            rowTxt += "<td id='job"+ index + "'>" + job + "</td>";
+            rowTxt += "<td><input type='checkbox' id='complete" + index + "' onclick='validateCheck(" + index + ")'></td>";
+            newRow.innerHTML = rowTxt;
+            document.getElementById("tblBody").appendChild(newRow);
+        }
+
+        function validateCheck(i){ //strike through completed tasks
+            var job = document.getElementById("job" + i);
+            if (document.getElementById("complete" + i).checked){
+                job.style.color = "#b5b5b5";
+                job.style.textDecoration = "line-through";
+            }else{ //remove styling to add item back to list
+                job.style.color = "black"; 
+                job.style.textDecoration = "none";
+            }
+        }   
+  
+  </script>
+  </body></html>
