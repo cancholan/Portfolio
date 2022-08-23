@@ -88,22 +88,21 @@ def getweather():
 
     #get selection from user, create link to JSON object, convert to dictionary
     icao = request.forms.get('airports')
-    url = "http://api.geonames.org/weatherIcaoJSON?ICAO=" + icao + "&username=jctcstudents"
+    url = "https://api.weatherapi.com/v1/current.json?key=4f651efeb5fc43cebae05508222308&q=" + icao + "&aqi=no"
     response = requests.get(url)
     data = response.json()
     
     #get weather information for chosen airport, convert units as needed
-    stationName = data["weatherObservation"]["stationName"]
-    elevation = data["weatherObservation"]["elevation"]
-    elevation = round(float(elevation) * 3.28084, 1)
-    clouds = data["weatherObservation"]["clouds"]
-    dewPoint = data["weatherObservation"]["dewPoint"]
-    dewPoint = round(float(dewPoint) * 1.8 + 32, 0)
-    windSpeed = data["weatherObservation"]["windSpeed"]
+    stationName = data["location"]["name"]
+    #elevation = data["weatherObservation"]["elevation"]
+    #elevation = round(float(elevation) * 3.28084, 1)
+    #clouds = data["weatherObservation"]["clouds"]
+    #dewPoint = data["weatherObservation"]["dewPoint"]
+    #dewPoint = round(float(dewPoint) * 1.8 + 32, 0)
+    windSpeed = data["wind_mph"]
     windSpeed = round(float(windSpeed) * 1.1508, 1)
-    temperature = data["weatherObservation"]["temperature"]
-    temperature = round(float(temperature) * 1.8 + 32, 0)
-    humidity = data["weatherObservation"]["humidity"]
+    temperature = data["current"]["temp_f"]
+    humidity = data["humidity"]
 
     #add data to tuple and send to table to display to user
     tpl = {'stationName': stationName, 'elevation': elevation, 'clouds': clouds, 'dewPoint': dewPoint, 'windSpeed': windSpeed, 'temperature': temperature, 'humidity': humidity}
