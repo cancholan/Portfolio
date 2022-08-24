@@ -94,18 +94,13 @@ def getweather():
     
     #get weather information for chosen airport, convert units as needed
     stationName = data["location"]["name"]
-    #elevation = data["weatherObservation"]["elevation"]
-    #elevation = round(float(elevation) * 3.28084, 1)
     clouds = data["current"]["condition"]["text"]
-    #dewPoint = data["weatherObservation"]["dewPoint"]
-    #dewPoint = round(float(dewPoint) * 1.8 + 32, 0)
     windSpeed = data["current"]["wind_mph"]
-    windSpeed = round(float(windSpeed) * 1.1508, 1)
     temperature = data["current"]["temp_f"]
     humidity = data["current"]["humidity"]
 
     #add data to tuple and send to table to display to user
-    tpl = {'stationName': stationName, 'elevation': elevation, 'clouds': clouds, 'dewPoint': dewPoint, 'windSpeed': windSpeed, 'temperature': temperature, 'humidity': humidity}
+    tpl = {'stationName': stationName, 'clouds': clouds, 'windSpeed': windSpeed, 'temperature': temperature, 'humidity': humidity}
     return template('weather', tpl)
 
 def validate_user(username, password):
