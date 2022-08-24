@@ -96,13 +96,13 @@ def getweather():
     stationName = data["location"]["name"]
     #elevation = data["weatherObservation"]["elevation"]
     #elevation = round(float(elevation) * 3.28084, 1)
-    #clouds = data["weatherObservation"]["clouds"]
+    clouds = data["current"]["condition"]["text"]
     #dewPoint = data["weatherObservation"]["dewPoint"]
     #dewPoint = round(float(dewPoint) * 1.8 + 32, 0)
-    windSpeed = data["wind_mph"]
+    windSpeed = data["current"]["wind_mph"]
     windSpeed = round(float(windSpeed) * 1.1508, 1)
     temperature = data["current"]["temp_f"]
-    humidity = data["humidity"]
+    humidity = data["current"]["humidity"]
 
     #add data to tuple and send to table to display to user
     tpl = {'stationName': stationName, 'elevation': elevation, 'clouds': clouds, 'dewPoint': dewPoint, 'windSpeed': windSpeed, 'temperature': temperature, 'humidity': humidity}
