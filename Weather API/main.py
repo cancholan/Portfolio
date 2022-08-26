@@ -88,7 +88,7 @@ def getweather():
 
     #get selection from user, create link to JSON object, convert to dictionary
     icao = request.forms.get('airports')
-    url = "https://api.weatherapi.com/v1/current.json?key=4f651efeb5fc43cebae05508222308&q=" + icao + "&aqi=no"
+    url = "https://api.weatherapi.com/v1/current.json?key=<<API KEY>>=" + icao + "&aqi=no"
     response = requests.get(url)
     data = response.json()
     
