@@ -12,16 +12,16 @@
     <div class="weatherform">
         <form action='/getweather' method='post'>
         
-        <select name="airports">
-        <option value="EGPD">Aberdeen, Scotland</option>
-        <option value="VIDP">New Delhi, India</option>
-        <option value="LSZH">Zurich, Switzerland</option>
-        <option value="RJAA">Tokyo, Japan</option>
-        <option value="EFHK">Helsinki, Finland</option>
-        <option value="LEMD">Madrid, Spain</option>
-        <option value="KCVG">Cincinnati, United States</option>
-        <option value="MMMX">Mexico City, Mexico</option>
-        <option value="SKBO">Bogot&aacute;, Columbia</option>
+        <select name="cities">
+        <option value="Aberdeen">Aberdeen, Scotland</option>
+        <option value="Aberdeen">New Delhi, India</option>
+        <option value="Zurich">Zurich, Switzerland</option>
+        <option value="Tokyo">Tokyo, Japan</option>
+        <option value="Helsinki">Helsinki, Finland</option>
+        <option value="Madrid">Madrid, Spain</option>
+        <option value="Cincinnati">Cincinnati, United States</option>
+        <option value="Mexico City">Mexico City, Mexico</option>
+        <option value="Bogota">Bogot&aacute;, Columbia</option>
         </select>
 
 
