@@ -87,7 +87,7 @@ def cookie2():
 def getweather():
 
     #get selection from user, create link to JSON object, convert to dictionary
-    icao = request.forms.get('airports')
+    icao = request.forms.get('cities')
     url = "https://api.weatherapi.com/v1/current.json?key=<<API KEY>>=" + icao + "&aqi=no"
     response = requests.get(url)
     data = response.json()
