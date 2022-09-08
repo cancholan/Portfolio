@@ -88,7 +88,7 @@ def getweather():
 
     #get selection from user, create link to JSON object, convert to dictionary
     city = request.forms.get('cities')
-    url = "https://api.openweathermap.org/data/2.5/weather?" + city + "&appid={API key}&units=imperial"
+    url = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid={API key}&units=imperial"
     response = requests.get(url)
     data = response.json()
     
