@@ -13,15 +13,15 @@
         <form action='/getweather' method='post'>
         
         <select name="cities">
-        <option value="Aberdeen">Aberdeen, Scotland</option>
-        <option value="Aberdeen">New Delhi, India</option>
-        <option value="Zurich">Zurich, Switzerland</option>
-        <option value="Tokyo">Tokyo, Japan</option>
-        <option value="Helsinki">Helsinki, Finland</option>
-        <option value="Madrid">Madrid, Spain</option>
-        <option value="Cincinnati">Cincinnati, United States</option>
-        <option value="Mexico City">Mexico City, Mexico</option>
-        <option value="Bogota">Bogot&aacute;, Columbia</option>
+        <option value="lat=57.149715&lon=-2.094278">Aberdeen, Scotland</option>
+        <option value="lat=28.632429&lon=77.218788">New Delhi, India</option>
+        <option value="lat=47.376888&lon=8.541694">Zurich, Switzerland</option>
+        <option value="lat=35.689487&lon=139.691711">Tokyo, Japan</option>
+        <option value="lat=60.169857&lon=24.938379">Helsinki, Finland</option>
+        <option value="lat=40.4168&lon=3.7038">Madrid, Spain</option>
+        <option value="lat=39.1031&lon=84.5120">Cincinnati, United States</option>
+        <option value="lat=19.4326&lon=99.1332">Mexico City, Mexico</option>
+        <option value="lat=4.7110&lon=74.0721">Bogot&aacute;, Columbia</option>
         </select>
 
 
