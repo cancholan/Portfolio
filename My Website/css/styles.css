@@ -91,6 +91,7 @@ footer .svg-inline--fa:hover{
 .socket{
     background-color: #222222;
     border-top: .1rem solid #4981b3;
+    height: 56px;
   }
 
 @media only screen and (max-width: 425px){
