@@ -5,7 +5,7 @@ html, body{
   width: 100%;
   font-family: 'Poppins', sans-serif;
   color: #222;
-  overflow-x: hidden im !important;
+  overflow-x: hidden !important;
   scroll-behavior: smooth;
 }
 
@@ -61,8 +61,9 @@ hr{
     display: none;
 }
 
-#workSection{
-    padding-bottom: 2em;
+.myWork{
+    background-color: rgb(228, 220, 220);
+    border-radius: 2em;
 }
 
 footer{
