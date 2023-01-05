@@ -13,7 +13,7 @@
   
        <table class='table table-bordered'>
           <thead>
-               <tr><th>Delete</th><th>Todo Items</th><th>Done</th></tr>
+               <tr><th>Delete</th><th>Todo Items</th><th>Color</th><th>Done</th></tr>
           </thead>
           <tbody id='tblBody'>
                <!-- rows will be added here -->
@@ -59,6 +59,15 @@
             var rowTxt = "<td><input type='button' class='btn btn-danger' ";
             rowTxt += "value='delete' onclick='removeItem(" + index + ")'></td>"; 
             rowTxt += "<td id='job"+ index + "'>" + job + "</td>";
+            rowTxt += `<td>
+                        <select class="form-select" id="formSelect${index}" onchange="changeColor(${index})">
+                            <option selected class="bg-white" value="bg-white">White</option>
+                            <option class="bg-primary" value="bg-primary">Blue</option>
+                            <option class="bg-success" value="bg-success">Green</option>
+                            <option class="bg-warning" value="bg-warning">Yellow</option>
+                            <option class="bg-danger" value="bg-danger">Red</option>
+                            </select>
+                       </td>`;
             rowTxt += "<td><input type='checkbox' id='complete" + index + "' onclick='validateCheck(" + index + ")'></td>";
             newRow.innerHTML = rowTxt;
             document.getElementById("tblBody").appendChild(newRow);
@@ -73,7 +82,14 @@
                 job.style.color = "black"; 
                 job.style.textDecoration = "none";
             }
-        }   
+        }
+        
+        function changeColor(i){
+            let job = document.getElementById("job" + i);
+            let e = document.getElementById("formSelect" + i);
+            let color = e.value;
+            job.className = color;
+        }
   
   </script>
   </body></html>

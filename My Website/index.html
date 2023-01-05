@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" href="css/styles.css">
         <link rel="stylesheet" href="css/all.css">
+        <script defer src="js/app.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
@@ -18,11 +19,11 @@
     <!--Jumbotron-->
     <div class="jumbotron-fluid">
         <div class="container text-center" id="jumboText">
-            <h1 class="display-4">Hello. My name is Nick Canchola.</h1>
-            <p>Lets work together!</p>
+            <h1 class="display-4 hidden">Hello. My name is Nick Canchola.</h1>
+            <p class="hidden">Lets work together!</p>
             <br>
             <br>
-            <a href="#about"><i class="far fa-4x fa-arrow-alt-circle-down"></i></a>
+            <a href="#about" class="hidden"><i class="far fa-4x fa-arrow-alt-circle-down"></i></a>
         </div>
     </div>
 
@@ -34,7 +35,7 @@
     </div>
 
     <!--carousel section-->
-    <div id="slides" class="carousel slide" data-ride="carousel" data-pause="hover">
+    <div id="slides" class="carousel slide hidden" data-ride="carousel" data-pause="hover">
         <ul class="carousel-indicators">
             <li data-target="#slides" data-slide-to="0" class="active"></li>
             <li data-target="#slides" data-slide-to="1"></li>
@@ -113,7 +114,7 @@
     </div>
 
     <!--mobile carousel section-->
-    <div id="mobileslides" class="carousel slide" data-ride="carousel" data-pause="hover">
+    <div id="mobileslides" class="carousel slide hidden" data-ride="carousel" data-pause="hover">
         <ul class="carousel-indicators">
             <li data-target="#slides" data-slide-to="0" class="active"></li>
             <li data-target="#slides" data-slide-to="1"></li>
@@ -191,19 +192,19 @@
     <!--3 col section-->
     <div class="container-fluid" id="workSection">
         <div class="row justify-content-around">
-            <div class="col-md-3 mt-2 myWork">
+            <div class="col-md-3 mt-2 myWork hidden">
                 <h4 class="my-4">ToDo List</h4>
                 <p>This is a basic ToDo list app that utilizes DOM manipulation and Bootstrap for styling. This allows users to add, delete, and strike though items and also keeps track of the total number of items on the list.</p>
                 <a href="todoList.html" class="btn btn-outline-dark btn-md" target="_blank">Visit Site</a>
                 <a href="https://github.com/cancholan/Portfolio/blob/main/My%20Website/todoList.html" class="btn btn-outline-secondary btn-md my-1" target="_blank"><i class="fab fa-github"></i> View on GitHub</a>
             </div>
-            <div class="col-md-3 mt-2 pb-3 myWork">
+            <div class="col-md-3 mt-2 pb-3 myWork hidden">
                 <h4 class="my-4">Weather App</h4>
                 <p>This app allows users to create an account and sign in to view up to date weather information for various cities around the globe. It utilizes the bottle.py micro-framework, MySQL database to store user information, and JSON data from <a href="https://openweathermap.org/api" target="_blank">openweathermap.org/api</a> to display weather information for the user's selection.</p>
                 <a href="https://cancholan2.pythonanywhere.com/" class="btn btn-outline-dark btn-md" target="_blank">Visit Site</a>
                 <a href="https://github.com/cancholan/Portfolio/tree/main/Weather%20API" class="btn btn-outline-secondary btn-md my-1" target="_blank"><i class="fab fa-github"></i> View on GitHub</a>
             </div>
-            <div class="col-md-3 mt-2 myWork">
+            <div class="col-md-3 mt-2 myWork hidden">
                 <h4 class="my-4">Student Project</h4>
                 <p>This site allows users to search through a table of students. The table is printed onto the screen using AngularJS and AJAX requests to draw the student information from a separate JSON file. The site also utilizes Bootstrap for styling.</p>
                 <a href="https://cancholan.github.io/" class="btn btn-outline-dark btn-md" target="_blank">Visit Site</a>
@@ -221,8 +222,8 @@
     <!--Spotify music player-->  
     <div class="container">
         <div class="mb-4">
-            <p>I find music to be a great way get to know someone. So here is a selection of some of my favorite songs.</p>
-            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5ecnEaz8DtyRyDBB8osKHm?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            <p class="hidden">I find music to be a great way get to know someone. So here is a selection of some of my favorite songs.</p>
+            <iframe class="hidden" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5ecnEaz8DtyRyDBB8osKHm?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         </div>
     </div>
 
