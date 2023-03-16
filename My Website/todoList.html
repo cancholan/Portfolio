@@ -35,13 +35,17 @@
             }
         }
 
-        function addJob(jobText) {
-            todos.push(jobText);             // add new job text to the end of the array
+        function addJob(jobText, jobColor) {
+            const jobObject = {
+                text: jobText,
+                color: jobColor
+            }
+            todos.push(jobObject);             // add new job text to the end of the array
             todoTotal.innerHTML = todos.length;
             document.getElementById('newTodo').value = "";         // clear textbox
   
             // add table row using last index and job text
-            makeTableRow(todos.length -1, jobText);                 
+            makeTableRow(todos.length -1, jobObject.text, jobObject.color);                 
         }
   
         function removeItem(n) {
@@ -50,23 +54,34 @@
             document.getElementById("tblBody").innerHTML = "";   // delete all rows
   
             for(i=0; i<todos.length; i++){                    // rebuild table rows      
-                makeTableRow(i, todos[i]);     // add  row from index i of array
+                makeTableRow(i, todos[i].text, todos[i].color);     // add  row from index i of array
+            }
+        }
+
+        function changeColor(n){
+            let e = document.getElementById("formSelect" + n);
+            let newColor = e.value;
+            todos[n].color = newColor;
+            document.getElementById("tblBody").innerHTML = "";
+
+            for(i=0; i<todos.length; i++){
+                makeTableRow(i, todos[i].text, todos[i].color)
             }
         }
   
-        function makeTableRow(index, job) {
+        function makeTableRow(index, job, color) {
             var newRow = document.createElement("tr"); 
             var rowTxt = "<td><input type='button' class='btn btn-danger' ";
             rowTxt += "value='delete' onclick='removeItem(" + index + ")'></td>"; 
-            rowTxt += "<td id='job"+ index + "'>" + job + "</td>";
+            rowTxt += `<td id=job${index} class=${color}>${job}</td>`;
             rowTxt += `<td>
                         <select class="form-select" id="formSelect${index}" onchange="changeColor(${index})">
-                            <option selected class="bg-white" value="bg-white">White</option>
+                            <option class="bg-white" value="bg-white">White</option>
                             <option class="bg-primary" value="bg-primary">Blue</option>
                             <option class="bg-success" value="bg-success">Green</option>
                             <option class="bg-warning" value="bg-warning">Yellow</option>
                             <option class="bg-danger" value="bg-danger">Red</option>
-                            </select>
+                        </select>
                        </td>`;
             rowTxt += "<td><input type='checkbox' id='complete" + index + "' onclick='validateCheck(" + index + ")'></td>";
             newRow.innerHTML = rowTxt;
@@ -82,13 +97,6 @@
                 job.style.color = "black"; 
                 job.style.textDecoration = "none";
             }
-        }
-        
-        function changeColor(i){
-            let job = document.getElementById("job" + i);
-            let e = document.getElementById("formSelect" + i);
-            let color = e.value;
-            job.className = color;
         }
   
   </script>
