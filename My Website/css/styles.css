@@ -116,6 +116,11 @@ footer .svg-inline--fa:hover{
         display: block;
     }
 
+    .myWork{
+        margin: .5em;
+        padding: 1em;
+    }
+
     .carousel-item{
         height: 555px;
         margin: 0 .5em;
