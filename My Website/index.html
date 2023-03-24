@@ -1,217 +1,378 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Welcome!</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <link rel="stylesheet" href="css/styles.css">
-        <link rel="stylesheet" href="css/all.css">
-        <script defer src="js/app.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-        <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-    </head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Welcome!</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/all.css" />
+    <script defer src="js/app.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+  </head>
 
-
-    <!--Jumbotron-->
-    <div class="jumbotron-fluid">
-        <div class="container text-center" id="jumboText">
-            <h1 class="display-4 hidden">Hello. My name is Nick Canchola.</h1>
-            <p class="hidden">Lets work together!</p>
-            <br>
-            <br>
-            <a href="#about" class="hidden"><i class="far fa-4x fa-arrow-alt-circle-down"></i></a>
-        </div>
+  <!--Jumbotron-->
+  <div class="jumbotron-fluid">
+    <div class="container text-center" id="jumboText">
+      <h1 class="display-4 hidden">Hello. My name is Nick Canchola.</h1>
+      <p class="hidden">Lets work together!</p>
+      <br />
+      <br />
+      <a href="#about" class="hidden"
+        ><i class="far fa-4x fa-arrow-alt-circle-down"></i
+      ></a>
     </div>
+  </div>
 
+  <!--About me heading-->
+  <div class="text-left mt-5 ml-5">
+    <h1 class="text-dark pt-4" id="about">About me.</h1>
+    <hr />
+  </div>
 
-    <!--About me heading-->
-    <div class="text-left mt-5 ml-5">
-        <h1 class="text-dark pt-4" id="about">About me.</h1>
-        <hr>
-    </div>
-
-    <!--carousel section-->
-    <div id="slides" class="carousel slide hidden" data-ride="carousel" data-pause="hover">
-        <ul class="carousel-indicators">
-            <li data-target="#slides" data-slide-to="0" class="active"></li>
-            <li data-target="#slides" data-slide-to="1"></li>
-            <li data-target="#slides" data-slide-to="2"></li>
-        </ul>
-        <div class="carousel-inner">
+  <!--carousel section-->
+  <div
+    id="slides"
+    class="carousel slide hidden"
+    data-ride="carousel"
+    data-pause="hover"
+  >
+    <ul class="carousel-indicators">
+      <li data-target="#slides" data-slide-to="0" class="active"></li>
+      <li data-target="#slides" data-slide-to="1"></li>
+      <li data-target="#slides" data-slide-to="2"></li>
+    </ul>
+    <div class="carousel-inner">
+      <div class="container">
+        <div class="row justify content center">
+          <div class="carousel-item active">
+            <h3>Who am I?</h3>
+            <p>
+              I am a front-end web developer based in Fort Thomas, KY. I am
+              proficeint in HTML5, CSS3, JavaScript, and Python. Currently I am
+              learning more about React to further expand upon my capabilities.
+              I am seeking an entry level role as a developer in the greater
+              Cincinnati area. Here you will find my professional history as
+              well as a portforlio of my work. In my free time, I enjoy playing
+              table-top and video games and listening to vinyl records.
+            </p>
+          </div>
+          <div class="carousel-item">
+            <h3>Education</h3>
             <div class="container">
-                <div class="row justify content center">
-                    <div class="carousel-item active">
-                        <h3>Who am I?</h3>
-                        <p>I am a front-end web developer based in Fort Thomas, KY. I am proficeint in HTML5, CSS3, JavaScript, and Python.  Currently I am learning more about React to further expand upon my capabilities. I am seeking an entry level role as a developer in the greater Cincinnati area. Here you will find my professional history as well as a portforlio of my work. In my free time, I enjoy playing table-top and video games and listening to vinyl records. </p>
-                    </div>
-                    <div class="carousel-item">
-                        <h3>Education</h3>
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-6">
-                                    <h5>Gateway Community and Technical College</h5>
-                                    <ul>
-                                        <li>Associates Degree in CIT on the Programming Track</li>
-                                        <li>Graduated: May, 2021</li>
-                                        <li>GPA: 3.8</li>
-                                    </ul>
-                                </div>
-                                <div class="col-6">
-                                    <h5>Northern Kentucky University</h5>
-                                    <ul>
-                                        <li>Bachelor of Arts Degree in International Studies, Spanish Minor</li>
-                                        <li>Graduated: December, 2016</li>
-                                        <li>GPA: 3.5</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <h3>Work Experience</h3>
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-4">
-                                    <h5>Pomeroy - PC Repair Technician</h5>
-                                    <ul>
-                                        <li>Clean and perform diagnostics for various PCs, laptops, servers, and printers</li>
-                                        <li>Track and update service request tickets using Oracle</li>
-                                        <li>Inject Verifone card readers with cryptographic keys</li>
-                                    </ul>
-                                </div>
-                                <div class="col-4">
-                                    <h5>Cincinnati Art Museum - Intern</h5>
-                                    <ul>
-                                        <li>Wrote and edited new security procedures and policies</li>
-                                        <li>Worked with manager to ensure PCI DSS compliance across entire network</li>
-                                        <li>Utilized Umbraco to add alt text to images on the cincinnatiartmuseum.org site to accommodate users who rely on screen readers</li>
-                                        <li>Fixed broken links and updated styling for <a href="https://discoveringthestory.com/" target="_blank">DiscoveringtheStory.com </a>and <a href="https://art-throughachildseye.org" target="_blank">ThroughaChildsEye.com</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col-4">
-                                    <h5>CompuCom - Help Desk Representative</h5>
-                                    <ul>
-                                        <li>Assisted users with various application questions over the phone</li>
-                                        <li>Performed basic troubleshooting for various devices and web applications</li>
-                                        <li>Filled out ticketing information and escalated to appropriate teams</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="row justify-content-center">
-                                <div>
-                                    <p>For my full resume visit my <strong><a href="https://www.linkedin.com/in/nick-canchola-210362190/">LinkedIn</a></strong> profile.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+              <div class="row">
+                <div class="col-6">
+                  <h5>Gateway Community and Technical College</h5>
+                  <ul>
+                    <li>Associates Degree in CIT on the Programming Track</li>
+                    <li>Graduated: May, 2021</li>
+                    <li>GPA: 3.8</li>
+                  </ul>
                 </div>
+                <div class="col-6">
+                  <h5>Northern Kentucky University</h5>
+                  <ul>
+                    <li>
+                      Bachelor of Arts Degree in International Studies, Spanish
+                      Minor
+                    </li>
+                    <li>Graduated: December, 2016</li>
+                    <li>GPA: 3.5</li>
+                  </ul>
+                </div>
+              </div>
             </div>
-        </div>
-    </div>
-
-    <!--mobile carousel section-->
-    <div id="mobileslides" class="carousel slide hidden" data-ride="carousel" data-pause="hover">
-        <ul class="carousel-indicators">
-            <li data-target="#slides" data-slide-to="0" class="active"></li>
-            <li data-target="#slides" data-slide-to="1"></li>
-        </ul>
-        <div class="carousel-inner">
+          </div>
+          <div class="carousel-item">
+            <h3>Work Experience</h3>
             <div class="container">
-                <div class="row justify content center">
-                    <div class="carousel-item active">
-                        <h3>Who am I?</h3>
-                        <p>I am a web developer based in Fort Thomas, KY. I am proficeint in HTML5, CSS3, JavaScript, Python, and am currently learning SQL. I am seeking an entry level role as a  front-end developer in the greater Cincinnati area. Here you will find my professional history as well as a portforlio of my work. In my free time, I enjoy playing table-top and video games and listening to vinyl records. </p>
-                    </div>
-                    <div class="carousel-item">
-                        <h3>Education</h3>
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-6">
-                                    <h5>Gateway Community and Technical College</h5>
-                                    <ul>
-                                        <li>Associates Degree in CIT on the Programming Track</li>
-                                        <li>Graduated: May, 2021</li>
-                                        <li>GPA: 3.8</li>
-                                    </ul>
-                                </div>
-                                <div class="col-6">
-                                    <h5>Northern Kentucky University</h5>
-                                    <ul>
-                                        <li>Bachelor of Arts Degree in International Studies, Spanish Minor</li>
-                                        <li>Graduated: December, 2016</li>
-                                        <li>GPA: 3.5</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+              <div class="row">
+                <div class="col-4">
+                  <h5>Pomeroy - PC Repair Technician</h5>
+                  <ul>
+                    <li>
+                      Clean and perform diagnostics for various PCs, laptops,
+                      servers, and printers
+                    </li>
+                    <li>
+                      Track and update service request tickets using Oracle
+                    </li>
+                    <li>
+                      Inject Verifone card readers with cryptographic keys
+                    </li>
+                    <li>
+                      Completed HP Commercial and Consumer Desktop,
+                      Wordstations, and Notebooks Service Qualification
+                    </li>
+                  </ul>
                 </div>
+                <div class="col-4">
+                  <h5>Cincinnati Art Museum - Intern</h5>
+                  <ul>
+                    <li>
+                      Wrote and edited new security procedures and policies
+                    </li>
+                    <li>
+                      Worked with manager to ensure PCI DSS compliance across
+                      entire network
+                    </li>
+                    <li>
+                      Utilized Umbraco to add alt text to images on the
+                      cincinnatiartmuseum.org site to accommodate users who rely
+                      on screen readers
+                    </li>
+                    <li>
+                      Fixed broken links and updated styling for
+                      <a href="https://discoveringthestory.com/" target="_blank"
+                        >DiscoveringtheStory.com </a
+                      >and
+                      <a
+                        href="https://art-throughachildseye.org"
+                        target="_blank"
+                        >ThroughaChildsEye.com</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-4">
+                  <h5>CompuCom - Help Desk Representative</h5>
+                  <ul>
+                    <li>
+                      Assisted users with various application questions over the
+                      phone
+                    </li>
+                    <li>
+                      Performed basic troubleshooting for various devices and
+                      web applications
+                    </li>
+                    <li>
+                      Filled out ticketing information and escalated to
+                      appropriate teams
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="row justify-content-center">
+                <div>
+                  <p>
+                    For my full resume visit my
+                    <strong
+                      ><a
+                        href="https://www.linkedin.com/in/nick-canchola-210362190/"
+                        >LinkedIn</a
+                      ></strong
+                    >
+                    profile.
+                  </p>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 
-    <!--My work heading-->
-    <div class="text-left mt-5 ml-5">
-        <h1 class="text-dark pt-4" id="mywork">My Work.</h1>
-        <hr>
-    </div>
-
-    <!--3 col section-->
-    <div class="container-fluid" id="workSection">
-        <div class="row justify-content-around">
-            <div class="col-md-3 mt-2 myWork hidden">
-                <h4 class="my-4">ToDo List</h4>
-                <p>This is a basic ToDo list app that utilizes DOM manipulation and Bootstrap for styling. This allows users to add, delete, and strike though items and also keeps track of the total number of items on the list.</p>
-                <a href="todoList.html" class="btn btn-outline-dark btn-md" target="_blank">Visit Site</a>
-                <a href="https://github.com/cancholan/Portfolio/blob/main/My%20Website/todoList.html" class="btn btn-outline-secondary btn-md my-1" target="_blank"><i class="fab fa-github"></i> View on GitHub</a>
+  <!--mobile carousel section-->
+  <div
+    id="mobileslides"
+    class="carousel slide hidden"
+    data-ride="carousel"
+    data-pause="hover"
+  >
+    <ul class="carousel-indicators">
+      <li data-target="#slides" data-slide-to="0" class="active"></li>
+      <li data-target="#slides" data-slide-to="1"></li>
+    </ul>
+    <div class="carousel-inner">
+      <div class="container">
+        <div class="row justify content center">
+          <div class="carousel-item active">
+            <h3>Who am I?</h3>
+            <p>
+              I am a web developer based in Fort Thomas, KY. I am proficeint in
+              HTML5, CSS3, JavaScript, Python, and am currently learning SQL. I
+              am seeking an entry level role as a front-end developer in the
+              greater Cincinnati area. Here you will find my professional
+              history as well as a portforlio of my work. In my free time, I
+              enjoy playing table-top and video games and listening to vinyl
+              records.
+            </p>
+          </div>
+          <div class="carousel-item">
+            <h3>Education</h3>
+            <div class="container">
+              <div class="row">
+                <div class="col-6">
+                  <h5>Gateway Community and Technical College</h5>
+                  <ul>
+                    <li>Associates Degree in CIT on the Programming Track</li>
+                    <li>Graduated: May, 2021</li>
+                    <li>GPA: 3.8</li>
+                  </ul>
+                </div>
+                <div class="col-6">
+                  <h5>Northern Kentucky University</h5>
+                  <ul>
+                    <li>
+                      Bachelor of Arts Degree in International Studies, Spanish
+                      Minor
+                    </li>
+                    <li>Graduated: December, 2016</li>
+                    <li>GPA: 3.5</li>
+                  </ul>
+                </div>
+              </div>
             </div>
-            <div class="col-md-3 mt-2 pb-3 myWork hidden">
-                <h4 class="my-4">Weather App</h4>
-                <p>This app allows users to create an account and sign in to view up to date weather information for various cities around the globe. It utilizes the bottle.py micro-framework, MySQL database to store user information, and JSON data from <a href="https://openweathermap.org/api" target="_blank">openweathermap.org/api</a> to display weather information for the user's selection.</p>
-                <a href="https://cancholan2.pythonanywhere.com/" class="btn btn-outline-dark btn-md" target="_blank">Visit Site</a>
-                <a href="https://github.com/cancholan/Portfolio/tree/main/Weather%20API" class="btn btn-outline-secondary btn-md my-1" target="_blank"><i class="fab fa-github"></i> View on GitHub</a>
-            </div>
-            <div class="col-md-3 mt-2 myWork hidden">
-                <h4 class="my-4">Student Project</h4>
-                <p>This site allows users to search through a table of students. The table is printed onto the screen using AngularJS and AJAX requests to draw the student information from a separate JSON file. The site also utilizes Bootstrap for styling.</p>
-                <a href="https://cancholan.github.io/" class="btn btn-outline-dark btn-md" target="_blank">Visit Site</a>
-                <a href="https://github.com/cancholan/cancholan.github.io" class="btn btn-outline-secondary btn-md my-1" target="_blank"><i class="fab fa-github"></i> View on GitHub</a>
-            </div>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 
-    <!--Music heading-->
-    <div class="text-left mt-1 ml-5">
-        <h1 class="text-dark pt-4" id="mywork">Get to Know Me.</h1>
-        <hr>
+  <!--My work heading-->
+  <div class="text-left mt-5 ml-5">
+    <h1 class="text-dark pt-4" id="mywork">My Work.</h1>
+    <hr />
+  </div>
+
+  <!--3 col section-->
+  <div class="container-fluid" id="workSection">
+    <div class="row justify-content-around">
+      <div class="col-md-3 mt-2 myWork hidden">
+        <h4 class="my-4">ToDo List</h4>
+        <p>
+          This is a basic ToDo list app that utilizes DOM manipulation and
+          Bootstrap for styling. This allows users to add, delete, and strike
+          though items and also keeps track of the total number of items on the
+          list.
+        </p>
+        <a
+          href="todoList.html"
+          class="btn btn-outline-dark btn-md"
+          target="_blank"
+          >Visit Site</a
+        >
+        <a
+          href="https://github.com/cancholan/Portfolio/blob/main/My%20Website/todoList.html"
+          class="btn btn-outline-secondary btn-md my-1"
+          target="_blank"
+          ><i class="fab fa-github"></i> View on GitHub</a
+        >
+      </div>
+      <div class="col-md-3 mt-2 pb-3 myWork hidden">
+        <h4 class="my-4">Weather App</h4>
+        <p>
+          This app allows users to create an account and sign in to view up to
+          date weather information for various cities around the globe. It
+          utilizes the bottle.py micro-framework, MySQL database to store user
+          information, and JSON data from
+          <a href="https://openweathermap.org/api" target="_blank"
+            >openweathermap.org/api</a
+          >
+          to display weather information for the user's selection.
+        </p>
+        <a
+          href="https://cancholan2.pythonanywhere.com/"
+          class="btn btn-outline-dark btn-md"
+          target="_blank"
+          >Visit Site</a
+        >
+        <a
+          href="https://github.com/cancholan/Portfolio/tree/main/Weather%20API"
+          class="btn btn-outline-secondary btn-md my-1"
+          target="_blank"
+          ><i class="fab fa-github"></i> View on GitHub</a
+        >
+      </div>
+      <div class="col-md-3 mt-2 myWork hidden">
+        <h4 class="my-4">Student Project</h4>
+        <p>
+          This site allows users to search through a table of students. The
+          table is printed onto the screen using AngularJS and AJAX requests to
+          draw the student information from a separate JSON file. The site also
+          utilizes Bootstrap for styling.
+        </p>
+        <a
+          href="https://cancholan.github.io/"
+          class="btn btn-outline-dark btn-md"
+          target="_blank"
+          >Visit Site</a
+        >
+        <a
+          href="https://github.com/cancholan/cancholan.github.io"
+          class="btn btn-outline-secondary btn-md my-1"
+          target="_blank"
+          ><i class="fab fa-github"></i> View on GitHub</a
+        >
+      </div>
     </div>
+  </div>
 
-    <!--Spotify music player-->  
+  <!--Music heading-->
+  <div class="text-left mt-1 ml-5">
+    <h1 class="text-dark pt-4" id="mywork">Get to Know Me.</h1>
+    <hr />
+  </div>
+
+  <!--Spotify music player-->
+  <div class="container">
+    <div class="mb-4">
+      <p class="hidden">
+        I find music to be a great way get to know someone. So here is a
+        selection of some of my favorite songs.
+      </p>
+      <iframe
+        class="hidden"
+        style="border-radius: 12px"
+        src="https://open.spotify.com/embed/playlist/5ecnEaz8DtyRyDBB8osKHm?utm_source=generator"
+        width="100%"
+        height="380"
+        frameborder="0"
+        allowfullscreen=""
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy"
+      ></iframe>
+    </div>
+  </div>
+
+  <footer>
     <div class="container">
-        <div class="mb-4">
-            <p class="hidden">I find music to be a great way get to know someone. So here is a selection of some of my favorite songs.</p>
-            <iframe class="hidden" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5ecnEaz8DtyRyDBB8osKHm?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-        </div>
+      <div class="row text-light text-center justify-content-center">
+        <p class="col-12">
+          Click the links below to find me on LinkedIn and GitHub.
+        </p>
+        <ul class="social pt-3">
+          <li>
+            <a
+              href="https://www.linkedin.com/in/nick-canchola-210362190/"
+              target="_blank"
+              ><i class="fab fa-5x fa-linkedin"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://github.com/cancholan" target="_blank"
+              ><i class="fab fa-5x fa-github"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
     </div>
+  </footer>
 
-    <footer>
-        <div class="container">
-            <div class="row text-light text-center justify-content-center">
-                <p class="col-12">Click the links below to find me on LinkedIn and GitHub.</p>
-                <ul class="social pt-3">
-                    <li><a href="https://www.linkedin.com/in/nick-canchola-210362190/" target="_blank"><i class="fab fa-5x fa-linkedin"></i></a></li>
-                    <li><a href="https://github.com/cancholan" target="_blank"><i class="fab fa-5x fa-github"></i></a></li>
-                </ul>
-            </div>
-        </div>
-    </footer>
-
-    <div class="socket text-light text-center pt-3 pb-1">
-        <p>&copy; Copyright 2023 All Rights Reserved</p>
-	</div>
-
+  <div class="socket text-light text-center pt-3 pb-1">
+    <p>&copy; Copyright 2023 All Rights Reserved</p>
+  </div>
 </html>

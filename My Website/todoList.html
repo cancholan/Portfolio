@@ -36,6 +36,10 @@
         }
 
         function addJob(jobText, jobColor) {
+            if (!jobColor){
+                jobColor = "bg-white";
+            }
+            
             const jobObject = {
                 text: jobText,
                 color: jobColor
@@ -76,11 +80,11 @@
             rowTxt += `<td id=job${index} class=${color}>${job}</td>`;
             rowTxt += `<td>
                         <select class="form-select" id="formSelect${index}" onchange="changeColor(${index})">
-                            <option class="bg-white" value="bg-white">White</option>
-                            <option class="bg-primary" value="bg-primary">Blue</option>
-                            <option class="bg-success" value="bg-success">Green</option>
-                            <option class="bg-warning" value="bg-warning">Yellow</option>
-                            <option class="bg-danger" value="bg-danger">Red</option>
+                            <option class="bg-white" ${color === 'bg-white' ? 'selected' : ''} value="bg-white">White</option>
+                            <option class="bg-primary" ${color === 'bg-primary' ? 'selected' : ''} value="bg-primary">Blue</option>
+                            <option class="bg-success" ${color === 'bg-success' ? 'selected' : ''} value="bg-success">Green</option>
+                            <option class="bg-warning" ${color === 'bg-warning' ? 'selected' : ''} value="bg-warning">Yellow</option>
+                            <option class="bg-danger" ${color === 'bg-danger' ? 'selected' : ''} value="bg-danger">Red</option>
                         </select>
                        </td>`;
             rowTxt += "<td><input type='checkbox' id='complete" + index + "' onclick='validateCheck(" + index + ")'></td>";
