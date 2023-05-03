@@ -1,7 +1,6 @@
 //add blur animation to elements when they are in the field of view
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
-        console.log(entry);
         if (entry.isIntersecting){
             entry.target.classList.add('show');
         } else {

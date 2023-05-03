@@ -53,23 +53,8 @@ hr{
     margin-left: 0px;
 }
 
-.carousel-item{
-    height: 40em;
-    background-color: #d99e80;
-    padding: 2em;
-    border-radius: 2em;
-}
-
-.carousel-item:first-of-type h3{
-    margin-top: 150px;
-}
-
-.carousel-item:nth-of-type(2) h3{
-    margin-top: 150px;
-}
-
-#mobileslides{
-    display: none;
+#linkedInPara{
+    text-align: center;
 }
 
 .myWork{
@@ -90,13 +75,13 @@ ul.social{
     padding: 0;
   }
 
-footer .svg-inline--fa{
+footer .fab{
     color: aliceblue;
     padding: .1em;
     transition: 500ms;
   }
 
-footer .svg-inline--fa:hover{
+footer .fab:hover{
     color: #68a0d2;
   }
 
@@ -106,33 +91,3 @@ footer .svg-inline--fa:hover{
     height: 56px;
   }
 
-@media only screen and (max-width: 425px){
-
-    #slides{
-        display: none;
-    }
-
-    #mobileslides{
-        display: block;
-    }
-
-    .myWork{
-        margin: .5em;
-        padding: 1em;
-    }
-
-    .carousel-item{
-        height: 555px;
-        margin: 0 .5em;
-    }
-     
-    .carousel-item:first-of-type h3{
-        margin-top: 3em;
-    }
-
-    .carousel-item:nth-of-type(2) h3{
-        margin-top: 1em;
-    }
-
-
-}
