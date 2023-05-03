@@ -55,7 +55,6 @@ hr{
 
 #linkedInPara{
     text-align: center;
-    margin-top: 1em;
 }
 
 .myWork{
@@ -76,13 +75,13 @@ ul.social{
     padding: 0;
   }
 
-footer .svg-inline--fa{
+footer .fab{
     color: aliceblue;
     padding: .1em;
     transition: 500ms;
   }
 
-footer .svg-inline--fa:hover{
+footer .fab:hover{
     color: #68a0d2;
   }
 
@@ -92,11 +91,3 @@ footer .svg-inline--fa:hover{
     height: 56px;
   }
 
-@media only screen and (max-width: 425px){
-
-    .myWork{
-        margin: .5em;
-        padding: 1em;
-    }
-
-}
