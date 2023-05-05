@@ -4,9 +4,10 @@ html, body{
   height:100%;
   width: 100%;
   font-family: 'Poppins', sans-serif;
-  color: #222;
+  color: #b3afaf;
   overflow-x: hidden !important;
   scroll-behavior: smooth;
+  background-color: #02101a;
 }
 
 .hidden{
@@ -22,7 +23,7 @@ html, body{
 
 .jumbotron-fluid{
     height: 100vh;
-    background-image: url(../img/bg.jpg);
+    background-image: url(../img/blob-scene-haikei.svg);
     background-size: cover;
 }
 
@@ -34,7 +35,7 @@ html, body{
 
 /*Scroll icon*/
 .jumbotron-fluid a{
-    color: #222;
+    color: #b3afaf;
     transition: 600ms;
     display: inline-block;
 }
@@ -47,8 +48,10 @@ html, body{
     font-size: 2em;
 }
 
+
+
 hr{
-    border: 1px solid rgba(0,145,189,255);
+    border: 1px solid #23aa14;
     width: 15em;
     margin-left: 0px;
 }
@@ -58,12 +61,12 @@ hr{
 }
 
 .myWork{
-    background-color: rgb(228, 220, 220);
+    background-color: #00283b;
     border-radius: 2em;
 }
 
 footer{
-    background-color: #383838;
+    background-color: #01090f;
     padding: 1rem 2rem 3rem;
   }
 
@@ -76,7 +79,7 @@ ul.social{
   }
 
 footer .fab{
-    color: aliceblue;
+    color: #b3afaf;
     padding: .1em;
     transition: 500ms;
   }
@@ -86,8 +89,8 @@ footer .fab:hover{
   }
 
 .socket{
-    background-color: #222222;
-    border-top: .1rem solid #4981b3;
+    background-color: #01090f;
+    border-top: .1rem solid #23aa14;
     height: 56px;
   }
 
