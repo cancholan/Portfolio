@@ -35,14 +35,17 @@ html, body{
 
 /*Scroll icon*/
 .jumbotron-fluid a{
-    color: #b3afaf;
+    color: #d6cbcb;
     transition: 600ms;
     display: inline-block;
+    font-size: 1.5em;
+    text-decoration: underline;
 }
+
 .jumbotron-fluid a:hover{
     color: rgb(100, 100, 100);
-    transform: rotate(180deg);
 }
+
 
 .jumbotron-fluid p{
     font-size: 2em;
@@ -64,6 +67,11 @@ hr{
     background-color: #00283b;
     border-radius: 2em;
 }
+
+img{
+    max-height: 8em;
+}
+
 
 footer{
     background-color: #01090f;
