@@ -25,6 +25,16 @@
        var todos = [];	               // global array of todo items
        var todoTotal = document.getElementById('total');
        todoTotal.innerHTML = 0;
+
+       window.onload = () => {
+            if(localStorage.getItem("todoArr")){
+                todos = JSON.parse(localStorage.getItem("todoArr"));
+                todoTotal.innerHTML = todos.length;
+                for(let i=0; i < todos.length; i++){
+                    makeTableRow(i, todos[i].text, todos[i].color);
+                }
+            }
+       }
   
         function validate(){ //prevent user from entering blank task
             jobText = document.getElementById("newTodo").value; // get todo  text
@@ -33,6 +43,10 @@
             }else{
                 addJob(jobText);
             }
+        }
+
+        function setLocalStorage(arr){
+            localStorage.setItem("todoArr", JSON.stringify(arr));
         }
 
         function addJob(jobText, jobColor) {
@@ -49,7 +63,8 @@
             document.getElementById('newTodo').value = "";         // clear textbox
   
             // add table row using last index and job text
-            makeTableRow(todos.length -1, jobObject.text, jobObject.color);                 
+            makeTableRow(todos.length -1, jobObject.text, jobObject.color); 
+            setLocalStorage(todos);          
         }
   
         function removeItem(n) {
@@ -60,6 +75,7 @@
             for(i=0; i<todos.length; i++){                    // rebuild table rows      
                 makeTableRow(i, todos[i].text, todos[i].color);     // add  row from index i of array
             }
+            setLocalStorage(todos);
         }
 
         function changeColor(n){
@@ -71,6 +87,7 @@
             for(i=0; i<todos.length; i++){
                 makeTableRow(i, todos[i].text, todos[i].color)
             }
+            setLocalStorage(todos);
         }
   
         function makeTableRow(index, job, color) {
