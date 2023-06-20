@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
 html, body{
   height:100%;
@@ -31,6 +31,20 @@ html, body{
     top: 50%;
     transform: translateY(-50%);
     position: relative;
+}
+
+h1{
+    background: -webkit-linear-gradient(160deg, #23aa14 50%, #00283b 75%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600 !important;
+}
+#jumboText p{
+    background: -webkit-linear-gradient(160deg, #23aa14 50%, #00283b 90%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 /*Scroll icon*/
