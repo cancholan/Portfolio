@@ -3,6 +3,11 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <style>
+        .bg-primary {
+            color: black;
+        }
+    </style>
   
   </head><body>
     
@@ -93,8 +98,8 @@
         function makeTableRow(index, job, color) {
             var newRow = document.createElement("tr"); 
             var rowTxt = "<td><input type='button' class='btn btn-danger' ";
-            rowTxt += "value='delete' onclick='removeItem(" + index + ")'></td>"; 
-            rowTxt += `<td id=job${index} class=${color}>${job}</td>`;
+            rowTxt += "value='Delete' onclick='removeItem(" + index + ")'></td>"; 
+            rowTxt += `<td id=job${index}>${job}</td>`;
             rowTxt += `<td>
                         <select class="form-select" id="formSelect${index}" onchange="changeColor(${index})">
                             <option class="bg-white" ${color === 'bg-white' ? 'selected' : ''} value="bg-white">White</option>
@@ -106,6 +111,7 @@
                        </td>`;
             rowTxt += "<td><input type='checkbox' id='complete" + index + "' onclick='validateCheck(" + index + ")'></td>";
             newRow.innerHTML = rowTxt;
+            newRow.classList.add(color);
             document.getElementById("tblBody").appendChild(newRow);
         }
 
